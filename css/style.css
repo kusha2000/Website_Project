@@ -67,6 +67,41 @@ section{
     height: 2rem;
 }
 
+/*Category part*/
+
+.category .slide{
+    text-align: center;
+    border:var(--border);
+    border-radius: .5rem;
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+    background-color: var(--white);
+    display: inline-block;
+}
+.category .slide img{
+    height:9rem;
+    width:9rem;
+    object-fit: contain;
+}
+.category .slide h3{
+    font-size: 2rem;
+    color:var(--black);
+    
+}
+.category .slide:hover{
+    background-color: var(--black);
+}
+.category .slide:hover img{
+    filter:invert();
+}
+.category .slide:hover h3{
+    color: white;
+}
+
+
+
+
+
 /*Footer part of the home page*/
 
 .footer{
