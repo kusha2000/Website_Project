@@ -11,6 +11,8 @@ include 'config.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phone Shop</title>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
     <!-- css file -->
     <link rel="stylesheet" href="css/style.css">
 
@@ -18,6 +20,96 @@ include 'config.php';
 <body>
     <!-- Header File -->
     <?php include 'header.php';?>
+
+    <section class="phones" id="phones">
+        <h1 class="heading">Popular <span>Smart Phones</span></h1>
+        <div class="swiper phones-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <img src="uploaded_img/iphone14_128.jpg">
+                    <div class="content">
+                        <h3>new model</h3>
+                        <div class="price"><span>price: </span>Rs.289900/-</div>
+                        <p>128GB 4GB</p> 
+                        <a href="#" class="btn">check out</a>
+
+
+                        </p>
+                    </div>   
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="uploaded_img/iphone14_128.jpg">
+                    <div class="content">
+                        <h3>new model</h3>
+                        <div class="price"><span>price: <span>Rs.289900/-</div>
+                        <p>128GB 4GB</p> 
+                        <a href="#" class="btn">check out</a>
+
+
+                        </p>
+                    </div>   
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="uploaded_img/iphone14_128.jpg">
+                    <div class="content">
+                        <h3>new model</h3>
+                        <div class="price"><span>price: <span>Rs.289900/-</div>
+                        <p>128GB 4GB</p> 
+                        <a href="#" class="btn">check out</a>
+
+
+                        </p>
+                    </div>   
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="uploaded_img/iphone14_128.jpg">
+                    <div class="content">
+                        <h3>new model</h3>
+                        <div class="price"><span>price: <span>Rs.289900/-</div>
+                        <p>128GB 4GB</p> 
+                        <a href="#" class="btn">check out</a>
+
+
+                        </p>
+                    </div>   
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="uploaded_img/iphone14_128.jpg">
+                    <div class="content">
+                        <h3>new model</h3>
+                        <div class="price"><span>price: <span>Rs.289900/-</div>
+                        <p>128GB 4GB</p> 
+                        <a href="#" class="btn">check out</a>
+
+
+                        </p>
+                    </div>   
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="uploaded_img/iphone14_128.jpg">
+                    <div class="content">
+                        <h3>new model</h3>
+                        <div class="price"><span>price: <span>Rs.289900/-</div>
+                        <p>128GB 4GB</p> 
+                        <a href="#" class="btn">check out</a>
+
+
+                        </p>
+                    </div>   
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </section>
+
 
     <section class="category">
         <div class="slider">
@@ -95,12 +187,13 @@ include 'config.php';
 
     </section>
 
-
+    
 
     <!-- Footer File -->
     <?php include 'footer.php'?>
 
     <!-- JavaScript File -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 
 </body>
