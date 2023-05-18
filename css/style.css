@@ -20,16 +20,38 @@ body{
 
 section{
     padding:2rem;
-    max-width: 1200px;
-    margin:0 auto;
+
 }
 
 .heading{
-    text-align:center;
-    padding-bottom: 2rem;
-    font-size: 4.5rem;
-    color:var(--black);
+   display: flex;
+   flex-flow: column;
+   align-items: center;
+   justify-content: center;
+   gap:1rem;
+   background-color: var(--black);
+   text-align: center;
+   min-height: 20vh;
 }  
+
+.heading h3{
+    font-size: 5.5rem;
+    color:var(--white);
+    text-transform: uppercase;
+ }
+ 
+ .heading p{
+    font-size: 2.5rem;
+    color:var(--light-white);
+ }
+ 
+ .heading p a{
+    color:var(--main-color);
+ }
+ 
+ .heading p a:hover{
+    text-decoration: underline;
+ }
 
 .heading span{
     position: relative;
@@ -84,13 +106,11 @@ section{
 /*Heading part of the home page*/
 
 .header{
-    position:sticky;
-    top:0;
-    left:0;
-    right:0;
-    background-color:var(--white);
+    position: sticky;
+    top:0; left:0; right:0;
+    background-color: var(--white);
+    z-index: 1000;
     box-shadow: var(--box-shadow);
-    z-index:1000;
 }
 .header .flex{
     display: flex;
@@ -158,7 +178,6 @@ section{
 /*products part*/
 
 .products .box-container{
-    max-width:1200px;
     margin:0 auto;
     display:grid;
     grid-template-columns:repeat(auto-fit,25rem);

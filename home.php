@@ -21,8 +21,11 @@ include 'config.php';
     <!-- Header File -->
     <?php include 'header.php';?>
 
+    <section class="heading">
+    <h3>Popular Smart Phones</h3>
+    </section>
+
     <section class="phones" id="phones">
-        <h1 class="heading">Popular <span>Smart Phones</span></h1>
         <div class="swiper phones-slider">
             <div class="swiper-wrapper">
                 <div class="swiper-slide box">
@@ -155,8 +158,11 @@ include 'config.php';
         </div>
     </section>
 
+    <section class="heading">
+    <h3>Latest Products</h3>
+    </section>
+    
     <section class="products">
-        <h1 class="title">Latest Products</h1>
         <div class="box-container">
             <?php
                 $select_products=mysqli_query($conn,"SELECT * FROM `products`") or die('query failed');
