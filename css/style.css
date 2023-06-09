@@ -69,6 +69,11 @@ section{
     clip-path: polygon(0 90%,100% 80%,100% 100%,0% 100%);
 }
 
+.disabled{
+    pointer-events:none;
+    opacity:.5;
+}
+
 .btn,.delete-btn,.option-btn{
     display:inline-block;
     border-radius:.5rem;
@@ -216,6 +221,47 @@ section{
     font-size: 1.8rem;
     color:var(--black);
 
+}
+.products .box-container .box .fa-times{
+    position:absolute;
+    top:1rem;
+    right:1rem;
+    height:4rem;
+    width:4rem;
+    line-height:4.5rem;
+    font-size:2rem;
+    border-radius: .5rem;
+    background-color: var(--red);
+    color: var(--white);
+
+}
+.products .box-container .box .fa-times:hover{
+    
+    background-color: var(--black);
+
+
+}
+
+/* whishlist page*/
+
+.products .wishlist-total{
+    max-width:1200px;
+    margin:0 auto;
+    padding:1rem;
+    text-align: center;
+    background-color: var(--white);
+    border:var(--border);
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    margin-top: 5rem;;
+}
+.products .wishlist-total p{
+    font-size: 2.5rem;
+    color:var(--light-color);
+    margin-bottom: 1rem;
+}
+.products .wishlist-total span{
+    color: var(--red);
 }
 
 /* phone slider*/
