@@ -20,6 +20,7 @@ $user_id=1;
     <?php include 'header.php';?>
     
     <section class="about">
+
       <div class="wrapper">
         <h1> About Us</h1>
         <div class="aboutus">

@@ -54,14 +54,14 @@ textarea {
 }
 
 .contact-form {
-  background-color: var(--secondary-card);
+  background-color: var(--secondary-card-t);
   position: relative;
 
 }
 
 .circle {
   border-radius: 50%;
-  background: linear-gradient(135deg, transparent 20%, var(--secondary-card-t));
+  background: linear-gradient(135deg, transparent 20%, var(--secondary-card));
   position: absolute;
 }
 
@@ -191,7 +191,7 @@ textarea.input {
   opacity: 0;
   transition: 0.3s;
   height: 5px;
-  background-color: var(--secondary-card);
+  background-color: var(--secondary-card-t);
   top: 50%;
   transform: translateY(-50%);
 }

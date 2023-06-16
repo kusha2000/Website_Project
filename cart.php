@@ -15,7 +15,7 @@ if(!isset($user_id)){
 
 if(isset($_GET['delete'])){
     $delete_id = $_GET['delete'];
-    mysqli_query($conn, "DELETE FROM `cart` WHERE id = '$delete_id'") or die('query failed');
+    mysqli_query($conn, "DELETE FROM `cart` WHERE pid = '$delete_id'") or die('query failed');
     header('location:cart.php');
 }
 
@@ -73,7 +73,8 @@ if(isset($_POST['update_quantity'])){
             ?> 
             <div  class="card">
                 <div class="card-content">
-                    <span class="category-value"><?php echo $fetch_product['category']; ?></span>
+                    <a href="cart.php?delete=<?php echo $fetch_product['id'];?>" class="fas fa-times del-cart" onclick="return confirm('delete this from wishlist?');"></a>
+                    <span class="category-value-cart"><?php echo $fetch_product['category']; ?></span>
                     <img src="uploaded_img/<?php echo $fetch_product['image']; ?>" alt="" class="card-img">
                     <h1 class="card-title"><a><?php echo $fetch_product['name']; ?></a></h1>
                     <p class="card-title2">Rs.<?php echo $sub_total = $fetch_product['price'];?></p>
@@ -107,7 +108,7 @@ if(isset($_POST['update_quantity'])){
        <div class="wishlist-total">
             <p>Total : <span>Rs<?php echo $grand_total; ?>/-</span></p>
             <a href="shop.php" class="option-btn">Continue Shopping</a>
-            <a href="checkout.php" class="btn <?php echo($grand_total>1)?'':'disabled' ?>" >Proceed to Checkout</a>
+            <a href="checkout.php?amount=<?php echo $grand_total; ?>" class="btn <?php echo($grand_total>1)?'':'disabled' ?>" >Proceed to Checkout</a>
         </div>
 
 

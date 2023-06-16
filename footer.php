@@ -5,8 +5,8 @@
             <h3>quick links</h3>
             <a href="home.php"><img src="images/home.png">home</a>
             <a href="shop.php"><img src="images/shop.png">Shop</a>
-            <a href="#"><img src="images/about.png">About Us</a>
-            <a href="#"><img src="images/contact.png">Contact Us</a>
+            <a href="about.php"><img src="images/about.png">About Us</a>
+            <a href="contact.php"><img src="images/contact.png">Contact Us</a>
         </div>
 
         <div class="box">

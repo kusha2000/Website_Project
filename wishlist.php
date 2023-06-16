@@ -88,10 +88,14 @@ if(isset($_GET['delete_all'])){
               $select_wishlists = mysqli_query($conn, "SELECT * FROM `wishlist` WHERE user_id='$user_id'") or die('query failed');
               if(mysqli_num_rows($select_wishlists) > 0){
                   while($fetch_wishlists = mysqli_fetch_assoc($select_wishlists)){
+                    $product_id=$fetch_wishlists['pid'];
+                    $select_product = mysqli_query($conn, "SELECT * FROM `products` WHERE id = '$product_id' ") or die('query failed');
+                    $fetch_product = mysqli_fetch_assoc($select_product);
             ?>
                <form action="" method="POST" class="card">
                <div class="card-content">
-               <a href="wishlist.php?delete=<?php echo $fetch_wishlists['id'];?>" class="fas fa-times del" onclick="return confirm('delete this from wishlist?');"></a>
+                   <a href="wishlist.php?delete=<?php echo $fetch_wishlists['id'];?>" class="fas fa-times del" onclick="return confirm('delete this from wishlist?');"></a>
+                   <span class="category-value-cart"><?php echo $fetch_product['category']; ?></span>
                    <img src="uploaded_img/<?php echo $fetch_wishlists['image']; ?>" alt="" class="card-img">
                    <h1 class="card-title"><a href="view_page.php?pid=<?php echo $fetch_wishlists['id'];?>"><?php echo $fetch_wishlists['name']; ?></a></h1>
                    <p class="card-title">Rs.<?php echo $fetch_wishlists['price'];?></p>
@@ -123,7 +127,7 @@ if(isset($_GET['delete_all'])){
        <div class="wishlist-total">
             <p>grand rotal : <span>Rs.<?php echo $grand_total;?>/=</span></p>
             <a href="shop.php" class="option-btn">continue shopping</a>
-            <a href="wishlist.php?delete_all" class="delete-btn <?php echo($grand_total>1)?'':'disabled' ?>" onclick="return ('delete all from wishlist?');">delete all</a>
+            <a href="wishlist.php?delete_all" class="delete-btn <?php echo($grand_total>1)?'':'disabled' ?>" onclick="return confirm('delete all from wishlist?');">delete all</a>
         </div>
 
 

@@ -69,6 +69,8 @@ if(isset($_POST['add_to_cart'])){
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/font-awesome.min.css">
+
 
     <!-- css file -->
     <link rel="stylesheet" href="css/style.css">
@@ -82,9 +84,29 @@ if(isset($_POST['add_to_cart'])){
     <h3>Popular Smart Phones</h3>
     </section> -->
 
-    <section class="headings">
-    <h3 data-text="Popular Smart Phones">Popular_SmartPhones</h3>
+    
+
+    <section class="containers hero row">
+        <div class="content">
+
+            <div class="text-box">
+                <h1>PhoneX</h1>
+            </div>
+            <p>Smart range of collections</p>
+            <a href="shop.php" class="btn-card btn-success-card hero-btn">Shop Now</a>
+
+        </div>
+        <div class="img">
+            <img src="images/hero.png" alt="">
+
+        </div>
     </section>
+
+    <section class="headings">
+    <h3 data-text="Latest Products">Latest_Products</h3>
+    </section>
+
+    
 
     <section class="phones" id="phones">
         <div class="swiper phones-slider">
@@ -224,7 +246,7 @@ if(isset($_POST['add_to_cart'])){
     </section> -->
 
     <section class="headings">
-    <h3 data-text="Latest_Products">Latest_Products</h3>
+    <h3 data-text="Popular Smart Phones">Popular_SmartPhones</h3>
     </section>
     
 
