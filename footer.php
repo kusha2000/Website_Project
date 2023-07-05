@@ -11,8 +11,8 @@
 
         <div class="box">
             <h3>extra link</h3>
-            <a href="#"><img src="images/signin.png">Sign In</a>
-            <a href="#"><img src="images/signup.png">Sign Up</a>
+            <a href="Login&Signin.php"><img src="images/signin.png">Sign In</a>
+            <a href="Login&Signin.php"><img src="images/signup.png">Sign Up</a>
         </div>
 
         <div class="box">
