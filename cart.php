@@ -4,10 +4,8 @@
 
 session_start();
 
-//$user_id = $_SESSION['user_id'];
+$user_id = $_SESSION['user_id'];
 
-//For Testing
-$user_id = 1;
 
 if(!isset($user_id)){
    header('location:login.php');

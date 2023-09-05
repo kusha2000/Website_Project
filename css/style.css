@@ -1543,6 +1543,55 @@ p{
 }
 
 
+/*This is css styles for thanks.php
+  ---------------------------------*/
+  .thanks .image{
+    position:relative;
+    margin-top: -3rem;
+    margin-left: -2rem;
+    margin-bottom: 20rem;
+     
+  }
+  .thanks .image img{
+    width: 102%;
+     
+  }
+  .thanks .image .text{
+    position:absolute;
+    top:0;
+    margin-top:3rem;
+    margin-left:10rem;
+  }
+  .thanks .image .text h1{
+    font-size: 6rem;
+    color:var(--white);
+    font-weight: 800;
+  
+  }
+  .thanks .image .text h2{
+    font-size: 2rem;
+    color:var(--white);
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+  
+  }
+  .thanks .image .text a{
+    font-size: 1.5rem;
+    background-color: var(--white);
+    color:var(--black);
+    font-weight: 500;
+    padding: 1.5rem;
+    border: var(--border);
+    border-radius: 5rem;
+  
+  }
+  .thanks .image .text a:hover{
+    background-color: var(--orange);
+    color:var(--black);
+  
+  
+  }
+
 
 
 

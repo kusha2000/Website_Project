@@ -1,6 +1,9 @@
 <?php
 
 include 'config.php';
+session_start();
+
+$user_id=$_SESSION['user_id'];
 
 if(isset($_POST['add_to_wishlist'])){
 
@@ -9,8 +12,7 @@ if(isset($_POST['add_to_wishlist'])){
     $product_price = $_POST['product_price'];
     $product_image = $_POST['product_image'];
 
-    //For Test
-    $user_id=1;
+    
 
     $check_wishlist_numbers = mysqli_query($conn, "SELECT * FROM `wishlist` WHERE name = '$product_name' AND user_id = '$user_id'") or die('query failed');
 
@@ -35,9 +37,7 @@ if(isset($_POST['add_to_cart'])){
     $product_image = $_POST['product_image'];
     $product_quantity = 1;
 
-    //For Testing
-    $user_id=1;
-
+    
     $check_cart_numbers = mysqli_query($conn, "SELECT * FROM `cart` WHERE name = '$product_name' AND user_id = '$user_id'") or die('query failed');
 
     if(mysqli_num_rows($check_cart_numbers) > 0){

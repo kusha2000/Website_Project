@@ -1,9 +1,9 @@
 <?php
 
 include 'config.php';
+session_start();
 
-//For Testing
-$user_id=1;
+$user_id=$_SESSION['user_id'];
 
 if(isset($_POST['add_to_wishlist'])){
 
@@ -35,8 +35,7 @@ if(isset($_POST['add_to_cart'])){
     $product_image = $_POST['product_image'];
     $product_quantity = 1;
 
-    //For Testing
-    $user_id=1;
+    $user_id=$_SESSION['user_id'];
 
     $check_cart_numbers = mysqli_query($conn, "SELECT * FROM `cart` WHERE name = '$product_name' AND user_id = '$user_id'") or die('query failed');
 

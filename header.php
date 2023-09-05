@@ -1,4 +1,7 @@
+
+
 <?php
+
 if(isset($message)){
    foreach($message as $message){
       echo '
@@ -35,14 +38,15 @@ if(isset($message)){
         <div class="icons">
             <div id="user-btn" class="fas fa-user"></div>
             <div id="menu-btn">
-            
+                <?php
+                $user_id=$_SESSION['user_id'] ;
+            ?>
             
                 <img src="images/menu-items.svg">
             </div>
             <a href="search_page.php" class="fas fa-search"></a>
             <?php
-                //Fot Testing
-                $user_id=1;
+                
                 $select_wishlist_count = mysqli_query($conn, "SELECT * FROM `wishlist` WHERE user_id = '$user_id'") or die('query failed');
                 $wishlist_num_rows = mysqli_num_rows($select_wishlist_count);
             ?>

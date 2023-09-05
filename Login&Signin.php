@@ -9,16 +9,34 @@ if(isset($_POST['login'])){
     $email = mysqli_real_escape_string($conn, $_POST['lemail']);
     $password = mysqli_real_escape_string($conn, $_POST['lpass']);
 
-  
+    echo "<script>alert('ok')  </script>";
     $select_user = mysqli_query($conn, "SELECT * FROM `users` WHERE email = '$email' AND password='$password'") or die('query failed');
+    $fetch_user=mysqli_fetch_assoc($select_user);
   
     if(mysqli_num_rows($select_user) > 0){
-        $message[] = 'Login successfully!';
-        header('location:home.php');
-    }else{
-       
-        $message[] = 'incorrect email or password!';
+        
+
+
+        if($fetch_user['user_type'] == 'admin'){
+
+            $_SESSION['admin_name'] = $fetch_user['name'];
+            $_SESSION['admin_email'] = $fetch_user['email'];
+            $_SESSION['admin_id'] = $fetch_user['id'];
+            header('location:admin_products.php');
+
+        }elseif($fetch_user['user_type'] == 'user'){
+            $message[] = 'Login successfully!';
+            $_SESSION['user_id'] = $fetch_user['id'];
+            $_SESSION['user_email'] = $fetch_user['email'];
+            $_SESSION['user_name'] = $fetch_user['first_name'];
+            header('location:home.php');
+        }else{
+            $message[] = 'incorrect email or password!';
+        }
+        
     }
+
+  
   
   }
   if(isset($_POST['register'])){
@@ -26,8 +44,8 @@ if(isset($_POST['login'])){
     $fname = mysqli_real_escape_string($conn, $_POST['rfname']);
     $lname = mysqli_real_escape_string($conn, $_POST['rlname']);
     $remail = mysqli_real_escape_string($conn, $_POST['remail']);
-    $pass = mysqli_real_escape_string($conn, md5($_POST['rpass']));
-    $cpass = mysqli_real_escape_string($conn, md5($_POST['rcpass']));
+    $pass = mysqli_real_escape_string($conn, $_POST['rpass']);
+    $cpass = mysqli_real_escape_string($conn,$_POST['rcpass']);
 
 
  
@@ -39,9 +57,9 @@ if(isset($_POST['login'])){
        if($pass != $cpass){
           $message[] = 'confirm password not matched!';
        }else{
-          $insert_product=mysqli_query($conn, "INSERT INTO `users`(first_name,last_name,email,password) VALUES('$fname','$lname','$remail','$pass')") or die(mysqli_error($conn));
+          $insert_product=mysqli_query($conn, "INSERT INTO `users`(first_name,last_name,email,password,user_type) VALUES('$fname','$lname','$remail','$pass','user')") or die(mysqli_error($conn));
           $message[] = 'registered successfully!';
-          header('location:home.php');
+          header('location:Login&Signin.php');
        }
     }
  

@@ -4,14 +4,13 @@
 
 session_start();
 
-// $user_id = $_SESSION['user_id'];
+$user_id = $_SESSION['user_id'];
 
 // if(!isset($user_id)){
 //    header('location:login.php');
 // };
 
-//For Testing
-$user_id=1;
+
 
 if(isset($_POST['order'])){
 
@@ -19,8 +18,7 @@ if(isset($_POST['order'])){
     // $fetch_user_details = mysqli_fetch_assoc($select_user_details);
     // $user_id = $_SESSION['user_id'];
 
-    //For Testing
-    $user_id=1;
+    
 
     $name = $_POST['name'];
     $number = $_POST['number'];
@@ -56,7 +54,7 @@ if(isset($_POST['order'])){
 
         mysqli_query($conn, "DELETE FROM `cart` WHERE user_id = '$user_id'") or die('query failed');
         $message[] = 'order placed successfully!';
-        header('location:home.php');
+        header('location:thanks.php');
         
     }
 }
@@ -93,8 +91,7 @@ if(isset($_POST['order'])){
         
         <h3>Place your Order</h3>
         <?php
-            //For Testing
-            $user_id=1;
+            
             $select_user_details = mysqli_query($conn, "SELECT * FROM `users` WHERE id='$user_id' ") or die('query failed');
             $fetch_user_details = mysqli_fetch_assoc($select_user_details);
         ?>

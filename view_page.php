@@ -2,8 +2,9 @@
 
 include 'config.php';
 
-//For Testing
-$user_id=1;
+session_start();
+
+$user_id=$_SESSION['user_id'];
 
 if(isset($_GET['pid'])){
     $phone_id = $_GET['pid'];
@@ -14,8 +15,7 @@ if(isset($_POST['add_to_wishlist'])){
     $product_id = $phone_id ;
     
 
-    //For Test
-    $user_id=1;
+    
 
     $check_wishlist_numbers = mysqli_query($conn, "SELECT * FROM `wishlist` WHERE pid = '$product_id' AND user_id = '$user_id'") or die('query failed');
 
@@ -45,8 +45,7 @@ if(isset($_POST['add_to_cart'])){
 
     $product_quantity = $_POST['quantity'];;
 
-    //For Testing
-    $user_id=1;
+  
 
     $check_cart_numbers = mysqli_query($conn, "SELECT * FROM `cart` WHERE pid = '$product_id' AND user_id = '$user_id'") or die('query failed');
 

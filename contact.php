@@ -7,10 +7,11 @@ include 'config.php';
   //  }else{
   //     $user_id = $_SESSION['user_id'];
   //  }
+
+session_start();
   
 
-//For Testing
-$user_id=1;
+$user_id=$_SESSION['user_id'];
 
 if(isset($_POST['send'])){
 
