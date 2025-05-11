@@ -2,27 +2,31 @@
 
 The Phone Selling E-commerce Website is a dynamic online platform designed to cater to smartphone enthusiasts, providing them with an array of features and functionalities that simplify the process of discovering and purchasing smartphones. This user-friendly website offers the following key features:
 <ul>
-<li>
+✅
 Product Search: Users can efficiently search and browse a diverse range of smartphones to find the model that best suits their needs. This feature simplifies the product discovery process.
-</li><li>
+<br>✅
 User Authentication: The platform ensures data security and personalization through user login and signup functionality, allowing users to create accounts and manage their profiles.
-</li><li>
+<br>✅
 Detailed Product Information: Users can access comprehensive information about each smartphone, including specifications, features, images, customer reviews, and pricing. This feature empowers customers to make informed purchase decisions.
-</li><li>
+<br>✅
 Dark and Light Mode: The website offers a customizable viewing experience with Dark and Light mode options, catering to user preferences and enhancing accessibility in different lighting conditions.
-</li><li>
-Ordering Smartphones: Users can easily add desired smartphones to their shopping carts, review their selections, and complete the purchase process, which includes secure payment integration, ensuring a seamless and safe transaction experience.
+<br>✅
+Ordering Smartphones: Users can easily add desired smartphones to their shopping carts, review their selections, and complete the purchase process, which includes secure payment integration, ensuring a seamless and safe transaction experience.<br>
 </ul>
-Technologies <br>
----------------
+<h3>Technologies Used</h3>
+<ul>
 
-Frontend - HTML, CSS, and JavaScript<br>
-Backend  - PHP and JavaScript <br>
-Database - MySQL 
-
+🔹 Frontend - HTML, CSS, and JavaScript<br>
+🔹 Backend  - PHP and JavaScript <br>
+🔹 Database - MySQL 
+</ul>
 <h2>This is the Full Demo of the project</h2><br><br>
 
-![phonex](https://github.com/kusha2000/Website_Project/assets/127003267/5f913bd6-0d8d-4757-8d0e-7e6f422e53cf)
+
+https://github.com/user-attachments/assets/1329e7b4-a6d3-4d36-8631-fece187b3218
+
+
+
 
 <br><br>
 <h2>This is the screenshots of the system</h2><br><br>
